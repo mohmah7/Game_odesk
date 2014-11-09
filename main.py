@@ -1,20 +1,21 @@
 import math
 import random
 
-
 def substraction():
     x = random.randrange(0,9)
     y = random.randrange(x,10)
     try:
         result = int(raw_input("What is the result of %d - %d :" %(y,x)))
+        if result == (y-x):
+            print 'Correct Answer'
+            score = 1
+        else:
+            print 'Incorrect Answer'
+            score = 0
     except:
         ValueError
+        print 'Incorrect Answer'
         print 'Please enter number only'
-    if result == (y-x):
-        print 'Correct'
-        score = 1
-    else:
-        print 'Incorrect'
         score = 0
     return score
 
@@ -24,14 +25,16 @@ def addition ():
     y = random.randrange(0,50)
     try:
         result = int(raw_input("What is the result of %d + %d :" %(x,y)))
+        if result == (x+y):
+            print 'Correct Answer '
+            score = 1
+        else:
+            print 'Incorrect Answer'
+            score = 0
     except:
         ValueError
+        print 'Incorrect Answer'
         print 'Please enter number only'
-    if result == (x+y):
-        print 'Correct'
-        score = 1
-    else:
-        print 'Incorrect'
         score = 0
     return  score
 
@@ -41,39 +44,40 @@ def multiplication ():
     y = random.randrange(0,10)
     try:
         result = int(raw_input("What is the result of %d * %d :" %(x,y)))
-
+        if result == (x*y):
+            print 'Correct Answer'
+            score = 1
+        else:
+            print 'Incorrect Answer'
+            score = 0
     except:
         ValueError
+        print 'Incorrect Answer'
         print 'Please enter number only'
-    if result == (x*y):
-            print 'Correct'
-            score = 1
-    else:
-            print 'Incorrect'
-            score = 0
+        score = 0
     return  score
 
 
 def division():
     x = 2
     y = 3
-
     while x%y != 0:
         x = random.randrange(0,20)
         y = random.randrange(1,20)
-
     try:
         result = int(raw_input("What is the result of %d / %d :" %(x,y)))
-
+        if result == (x/y):
+            print 'Correct Answer'
+            score = 1
+        else :
+            print 'Incorrect Answer'
+            score = 0
     except:
         ValueError
+        print 'Incorrect Answer'
         print 'Please enter number only'
-    if result == (x/y):
-        print 'Correct'
-        score = 1
-    else :
-        print 'Incorrect'
         score = 0
+
     return  score
 
 

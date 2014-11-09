@@ -1,10 +1,25 @@
 import random
 
-x = 2
-y = 3
 
-while x%y != 0:
-    x = random.randrange(0,15)
-    y = random.randrange(1,15)
+def substraction():
+    x = random.randrange(0,9)
+    y = random.randrange(x,10)
+    try:
+        result = int(raw_input("What is the result of %d - %d :" %(y,x)))
 
-print x,y
+        if result == (y-x):
+            print 'Correct Answer'
+            score = 1
+        else:
+            print 'Incorrect Answer'
+            score = 0
+    except:
+        ValueError
+        print 'Incorrect Answer'
+        print 'Please enter number only'
+        score = 0
+
+
+    return score
+
+substraction()
